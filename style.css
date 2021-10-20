@@ -1,0 +1,97 @@
+body {
+    background-image: url("img/back.png");
+    justify-content: center;
+}
+header {
+    margin: 0;
+    padding: 0;
+    font-family: fantasy, Arial;
+    color: #C0C0C0;
+    display: grid;
+    background: slategrey;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 5px;
+    box-shadow: 0 0 10px slategrey;
+}
+.tooltip *{
+    margin: 0;
+    padding: 0;
+}
+
+.tooltiptext {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltiptext:hover {
+    opacity: 100;
+    transition: opacity 0.3s;
+}
+.button_suicide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+.button_play{
+    border-radius: 25px;
+    box-shadow: 0 0 10px #A9A9A9;
+    height:50px;
+    color: #C0C0C0;
+    width:180px;
+    background: linear-gradient(90deg,#808080,#696969);
+    font-size: medium;
+    font-weight: normal;
+}
+.button_play:hover {
+    background: linear-gradient(90deg,#DCDCDC,#A9A9A9);
+    color: #000;
+}
+.game {
+    justify-content: center;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(4, 120px);
+}
+.game > div {
+    box-shadow: 0 0 10px slategrey;
+    position: relative;
+    background-color: slategrey;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid #fff
+}
+.points{
+    margin-top: 35px;
+    text-align: center;
+    color: #454547;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.points .name
+{
+    top: 15%;
+    left: 32%;
+}
+.points .count
+{
+    top: 15%;
+    left: 44%;
+}
+.mole {
+    position: absolute;
+    height: 100px;
+    z-index: 1;
+    animation: appear 0.3s linear;
+}
+
+@keyframes appear {
+    from {
+        top: 90px;
+    }
+    to {
+        top: 24px;
+    }
+}
